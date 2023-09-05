@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="qr-code-container">
+    <div class="qr-code">
+      <img [src]="qrCodeData" alt="Código QR de asistencia">
+    </div>
+    <div class="qr-info">
+      Escanea este código para registrar tu asistencia.
+    </div>
+      <ion-button expand="full" color="secondary" class="login-button" (click)="animateButton($event)">Volver</ion-button>
+  </div>
+</ion-content>
+
+

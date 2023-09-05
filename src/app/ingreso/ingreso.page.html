@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome-message">
+    <h1>Bienvenido a la App de Asistencia!</h1>
+    <p>Registra y administra la asistencia de estudiantes de manera eficiente.</p>
+    <ion-icon name="calendar"></ion-icon>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating">Correo electrónico</ion-label>
+    <ion-input placeholder="usuario@empresa.com"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input placeholder="Ingrese contrasena"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" color="primary" class="login-button" (click)="animateButton($event)">Iniciar sesión</ion-button>
+  <ion-button expand="full" color="secondary" class="login-button" (click)="animateButton($event)">Registrarse</ion-button>
+
+
+  <div class="reset-password-link">
+    <a>Restablecer contraseña</a>
+  </div>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome-container">
+    <div class="welcome-message">
+      <h2>Bienvenido!, Usuario.</h2>
+      <p>¡Es genial verte de nuevo! Esperamos que tengas un día genial.</p>
+    </div>
+  </div>
+
+  <ion-card>
+    <img src="./assets/img/DuocUcLogo.png" alt="">
+    <ion-card-header>
+      <ion-card-title>Secciones</ion-card-title>
+      <ion-icon name="albums"></ion-icon> 
+      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="horario" src="./assets/img/Horario.png" />
+    <ion-card-header>
+      <ion-card-title>Horarios</ion-card-title>
+      <ion-icon name="time"></ion-icon>
+      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="email-photo" src="./assets/img/email.jpg" />
+    <ion-card-header>
+      <ion-card-title>E-Mails</ion-card-title> 
+      <ion-icon name="mail"></ion-icon> 
+      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-button expand="full" color="primary" id="present-alert" class="logout-button" (click)="animateButton($event)">Cerrar sesion</ion-button>
+  <ion-alert trigger="present-alert" class="custom-alert" header="Estas seguro?" [buttons]="alertButtons"></ion-alert>
+  
+
+
