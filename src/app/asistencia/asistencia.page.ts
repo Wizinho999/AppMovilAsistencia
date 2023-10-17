@@ -1,6 +1,8 @@
 import * as QRCode from 'qrcode-generator';
 import { Component } from '@angular/core';
 
+//-- npm install qrcode-generator
+
 @Component({
   selector: 'app-asistencia',
   templateUrl: './asistencia.page.html',

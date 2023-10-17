@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-title>Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  <ion-card id="current-weather">
+    <ion-card-header>
+      <ion-card-title>El tiempo actual en Melipilla</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="sunny"></ion-icon>
+      
+      <h1>Temperatura: {{ res.main.temp }}°C</h1>
+      <p>Hora: {{ res.dt }}</p>
+      <p>Humedad: {{ res.main.humidity }}%</p>
+      <p>Velocidad del viento: {{ res.wind.speed }} KM</p>
+    </ion-card-content>
+  </ion-card>
+

@@ -29,4 +29,6 @@ export class PrincipalPage implements OnInit {
       cssClass: 'alert-button-confirm',
     },
   ];
+  nombreUsuario = localStorage.getItem('nombreUsuario');
 }
+
