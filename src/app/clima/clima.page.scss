@@ -1,6 +1,7 @@
-// Color de fondo general
+
 ion-content {
-  background: #15203f;
+  --background: #15203f; /* Fondo azul oscuro */
+  text-align: center;
   width: 413px;
 }
 
@@ -10,18 +11,15 @@ ion-toolbar {
   color: #3DC2FF; /* Color del texto del encabezado */
 }
 
-// Estilos para el contenido principal
-ion-content {
-  padding: 20px;
-  text-align: center;
-
   // Estilos para la tarjeta del tiempo actual
 #current-weather {
   background: #3880FF; /* Color de fondo de la tarjeta */
   border-radius: 10px; /* Radio de borde de la tarjeta */
-  box-shadow: 0px 0px 30px #33beff;
+  box-shadow: 0px 0px 20px #33beff;
   color: #ffffff; /* Color del texto en la tarjeta */
-
+  height: 91%;
+  
+}
   h2 {
     font-size: 18px; /* Tamaño de fuente del encabezado de la tarjeta */
     color: #ffffff; /* Cambia el color del encabezado a blanco */
@@ -32,29 +30,29 @@ ion-content {
       max-width: 100px; /* Ancho máximo de la imagen del icono del clima */
     }
   }
-}
+
 
   // Estilos para el pronóstico semanal
   #weekly-forecast {
     h2 {
       font-size: 18px; /* Tamaño de fuente del encabezado del pronóstico */
     }
-
+  }
     ion-list {
       list-style: none;
-
-      ion-item {
-        --background: #fff; /* Color de fondo de los elementos de la lista */
-        --border-radius: 5px; /* Radio de borde de los elementos de la lista */
-        --box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra de los elementos de la lista */
-
-        img {
-          max-width: 40px; /* Ancho máximo de las imágenes del pronóstico */
-        }
-      }
     }
-  }
+
+ion-item {
+--background: #fff; /* Color de fondo de los elementos de la lista */
+--border-radius: 5px; /* Radio de borde de los elementos de la lista */
+--box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra de los elementos de la lista */
 }
+img {
+max-width: 40px; /* Ancho máximo de las imágenes del pronóstico */
+}
+    
+  
+
 
 // Estilos para el pie de página
 ion-footer {
@@ -66,4 +64,69 @@ ion-footer {
     --color: #3498db; /* Color del texto del botón */
     --border-radius: 5px; /* Radio de borde del botón */
   }
+}
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+}
+
+ion-title {
+  animation: waveAnimation 3s infinite; /* Aplica la animación al título */
+}
+
+ion-card-title{
+  color: #fff;
+  font-size: 20vw;
+}
+
+/* Estilo personalizado para ajustar la altura de ion-card-content */
+.custom-card-content {
+  height: 100%;
+}
+
+ion-card-header{
+  h2{
+    color: #ffffff;
+    font-size: 6vw;
+  }
+}
+
+ion-card-content{
+  img{
+    max-width: 100%;
+    height: 150px;
+  }
+}
+
+ion-card-content{
+  h2{
+    font-size: 25vw;
+  }
+}
+
+#termometro{
+  font-size: 15vw;
+}
+
+#parcial{
+  font-size: 6vw;
+}
+
+#humedad{
+  font-size: 5vw
+}
+
+#velocidadv{
+  font-size: 5vw
 }

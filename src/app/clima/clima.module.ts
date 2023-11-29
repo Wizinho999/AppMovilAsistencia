@@ -8,6 +8,8 @@ import { ClimaPageRoutingModule } from './clima-routing.module';
 
 import { ClimaPage } from './clima.page';
 
+import {DateFormattingPipe} from '../pipes/date-formatting.pipe'
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,11 @@ import { ClimaPage } from './clima.page';
     IonicModule,
     ClimaPageRoutingModule
   ],
-  declarations: [ClimaPage]
+  declarations: [ClimaPage,
+                DateFormattingPipe,
+  ],
+  exports: [
+            DateFormattingPipe,
+  ]
 })
 export class ClimaPageModule {}

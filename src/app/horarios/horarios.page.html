@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Horarios</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card *ngFor="let dia of dias">
+          <!-- Tabla por día -->
+          <ion-card-header>
+            <ion-card-subtitle>{{ dia }}</ion-card-subtitle>
+            <ion-card-title>Horario | Asignatura | Profesor | Sala</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Bucle anidado para mostrar filas de datos -->
+            <ion-row *ngFor="let horario of horarios">
+              <ion-col>{{ horario.hora }}</ion-col>
+              <ion-col>{{ horario.asignatura }}</ion-col>
+              <ion-col>{{ horario.profesor }}</ion-col>
+              <ion-col>{{ horario.sala }}</ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

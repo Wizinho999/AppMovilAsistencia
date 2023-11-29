@@ -1,6 +1,6 @@
-#map {
-    height: 100%;
-}
+ion-content {
+    --background: #15203f; /* Fondo azul oscuroo */
+  }
 
 @keyframes waveAnimation {
     0%, 100% {
@@ -24,4 +24,13 @@
   ion-toolbar{
     color: #3498db;
     
+  }
+
+  ion-content{
+    color: #3498db;
+  }
+
+  ion-button{
+    width: 100%;
+    text-align: center;
   }

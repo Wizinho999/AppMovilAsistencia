@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Correos Electrónicos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de correos electrónicos recibidos -->
+  <ion-list *ngIf="receivedEmails.length > 0">
+    <ion-item *ngFor="let email of receivedEmails" (click)="verDetalle(email)">
+      <ion-avatar slot="start">
+        <ion-img [src]="email.avatar"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ email.nombreRemitente }}</h2>
+        <p>{{ email.asunto }}</p>
+      </ion-label>
+      <ion-note slot="end">{{ email.fecha }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje si no hay correos electrónicos recibidos -->
+  <ion-item *ngIf="receivedEmails.length === 0">
+    <ion-label>No hay correos electrónicos recibidos.</ion-label>
+  </ion-item>
+
+  <!-- Botón para redactar un nuevo correo -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="redactarCorreo()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

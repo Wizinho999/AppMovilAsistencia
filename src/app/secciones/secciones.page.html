@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Secciones</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card *ngFor="let section of sections">
+          <!-- Tabla por sección -->
+          <ion-card-header>
+            <ion-card-subtitle>{{ section.name }}</ion-card-subtitle>
+            <ion-card-title>Detalles de la Sección</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Tabla con encabezados -->
+            <ion-row>
+              <ion-col>Hora</ion-col>
+              <ion-col>Calificaciones</ion-col>
+              <ion-col>Asistencia</ion-col>
+            </ion-row>
+
+            <!-- Bucle anidado para mostrar filas de datos -->
+            <ion-row *ngFor="let schedule of section.schedules">
+              <ion-col >{{ schedule.hour }}</ion-col>
+              <ion-col>
+                <ion-button (click)="goToGradesPage(section.id, schedule.id)">
+                  Ver Calificaciones
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button (click)="goToAttendancePage(section.id, schedule.id)">
+                  Ver Asistencia
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

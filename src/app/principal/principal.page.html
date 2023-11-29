@@ -7,17 +7,17 @@
 <ion-content class="ion-padding">
   <div class="welcome-container">
     <div class="welcome-message">
-      <h2>Bienvenido!, {{ nombreUsuario }}.</h2> 
+      <h2>Bienvenido, {{ nombreUsuario }}!</h2> 
       <p>¡Es genial verte de nuevo! Esperamos que tengas un día genial.</p>
     </div>
   </div>
 
   <ion-card>
-    <img src="./assets/img/DuocUcLogo.png" alt="">
+    <img src="./assets/img/secciones.png" alt="">
     <ion-card-header>
       <ion-card-title>Secciones</ion-card-title>
       <ion-icon name="albums"></ion-icon> 
-      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+      <ion-button onclick="location.href='seccion'" expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
     </ion-card-header>
   </ion-card>
 
@@ -26,16 +26,16 @@
     <ion-card-header>
       <ion-card-title>Horarios</ion-card-title>
       <ion-icon name="time"></ion-icon>
-      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+      <ion-button onclick="location.href='horarios'" expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
     </ion-card-header>
   </ion-card>
 
   <ion-card>
-    <img alt="email-photo" src="./assets/img/email.jpg" />
+    <img alt="email-photo" src="./assets/img/email.png" />
     <ion-card-header>
       <ion-card-title>E-Mails</ion-card-title> 
       <ion-icon name="mail"></ion-icon> 
-      <ion-button expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
+      <ion-button onclick="location.href='email'" expand="full" color="primary" class="ir-button" (click)="animateButton($event)">ir</ion-button>
     </ion-card-header>
   </ion-card>
 

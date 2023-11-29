@@ -40,7 +40,7 @@ export class AppComponent {
   }
 
   abrirClima() {
-    this.router.navigate(["/clima"]);
+    this.router.navigate(["./clima"]);
     this.menu.close();
   }
   nombreUsuario = localStorage.getItem('nombreUsuario');

@@ -50,6 +50,26 @@ const routes: Routes = [
     path: 'clima',
     loadChildren: () => import('./clima/clima.module').then( m => m.ClimaPageModule)
   },
+  {
+    path: 'horarios',
+    loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
+  },
+  {
+    path: 'email',
+    loadChildren: () => import('./email/email.module').then( m => m.EmailPageModule)
+  },
+  {
+    path: 'redaccion-correo',
+    loadChildren: () => import('./redaccion-correo/redaccion-correo.module').then( m => m.RedaccionCorreoPageModule)
+  },
+  {
+    path: 'secciones',
+    loadChildren: () => import('./secciones/secciones.module').then( m => m.SeccionesPageModule)
+  },
+  {
+    path: 'seccion',
+    loadChildren: () => import('./seccion/seccion.module').then( m => m.SeccionPageModule)
+  },
 ];
 
 @NgModule({

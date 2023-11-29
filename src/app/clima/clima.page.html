@@ -1,23 +1,32 @@
+<!-- Encabezado de la página -->
 <ion-header>
-  <ion-toolbar color="white">
+  <ion-toolbar>
     <ion-title>Clima</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+<!-- Contenido de la página -->
 <ion-content>
-  
-
+  <!-- Tarjeta para mostrar el clima actual -->
   <ion-card id="current-weather">
     <ion-card-header>
-      <ion-card-title>El tiempo actual en Melipilla</ion-card-title>
+      <ion-card-title>Melipilla</ion-card-title>
+      <h2>{{ res.dt | dateFormatting}}</h2>
     </ion-card-header>
-    <ion-card-content>
-      <ion-icon name="sunny"></ion-icon>
-      
-      <h1>Temperatura: {{ res.main.temp }}°C</h1>
-      <p>Hora: {{ res.dt }}</p>
-      <p>Humedad: {{ res.main.humidity }}%</p>
-      <p>Velocidad del viento: {{ res.wind.speed }} KM</p>
-    </ion-card-content>
+    <ion-card-content class="custom-card-content">
+      <img src="https://openweathermap.org/img/wn/02d@2x.png"  alt="">
+
+      <p id="parcial">Parcialmente nublado</p>
+      <h2><ion-icon id="termometro" name="thermometer"></ion-icon>{{ res.main.temp | number: '1.0-0'}}°C</h2>
+      <p id="humedad"><ion-icon  name="water"></ion-icon> Humedad: {{ res.main.humidity }}%</p>
+      <p id="velocidadv"><ion-icon  name="speedometer"></ion-icon> Velocidad del viento: {{ res.wind.speed }} KM</p>
+    </ion-card-content>    
   </ion-card>
+  
+</ion-content>
+
+
 

@@ -1,0 +1,34 @@
+ion-content {
+  --background: #15203f; /* Fondo azul oscuroo */
+}
+ 
+ion-list{
+  background-color: #15203f;
+}
+
+ion-item{
+  background-color: #15203f;
+}
+
+ion-toolbar{
+  color: #3498db;
+}
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+}
+
+ion-title {
+  animation: waveAnimation 3s infinite; /* Aplica la animación al título */
+}
